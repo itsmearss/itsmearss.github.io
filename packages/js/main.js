@@ -68,6 +68,26 @@ tabs.forEach((tab) => {
   });
 });
 
+/*==================== PORTOFOLIO TABS ====================*/
+const portTabs = document.querySelectorAll("[port-data-target]"),
+  portTabContents = document.querySelectorAll("[port-data-content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("portofolio__active");
+    });
+    target.classList.add("portofolio__active");
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("portofolio__active");
+    });
+    tab.classList.add("portofolio__active");
+  });
+});
+
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll(".services__modal"),
   modalBtns = document.querySelectorAll(".services__button"),
@@ -87,6 +107,29 @@ modalCloses.forEach((modalClose) => {
   modalClose.addEventListener("click", () => {
     modalViews.forEach((modalView) => {
       modalView.classList.remove("active-modal");
+    });
+  });
+});
+
+/*==================== SERVICES MODAL ====================*/
+const portModalViews = document.querySelectorAll(".portofolio__modal"),
+  portModalBtns = document.querySelectorAll(".portofolio__button"),
+  portModalCloses = document.querySelectorAll(".portofolio__modal-close");
+
+let portModal = function (modalClick) {
+  modalViews[modalClick].classList.add("port-active-modal");
+};
+
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener("click", () => {
+    modal(i);
+  });
+});
+
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("port-active-modal");
     });
   });
 });

@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 190; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: 192; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -378,6 +378,12 @@ img {
   transition: 0.3s;
 }
 
+.button__icon2 {
+  font-size: 1.2rem;
+  margin-right: var(--mb-0-5);
+  transition: 0.3s;
+}
+
 .button--white {
   background-color: #fff;
   color: var(--first-color);
@@ -533,19 +539,19 @@ img {
 }
 
 .skills__python {
+  width: 80%;
+}
+
+.skills__tf {
+  width: 80%;
+}
+
+.skills__sci {
+  width: 70%;
+}
+
+.skills__opencv {
   width: 60%;
-}
-
-.skills__tab {
-  width: 70%;
-}
-
-.skills__sql {
-  width: 50%;
-}
-
-.skills__google {
-  width: 70%;
 }
 
 .skills__bank {
@@ -556,12 +562,32 @@ img {
   width: 70%;
 }
 
-.skills__counter {
+.skills__flutter {
   width: 80%;
 }
 
-.skills__office {
-  width: 90%;
+.skills__go {
+  width: 60%;
+}
+
+.skills__dart {
+  width: 70%;
+}
+
+.skills__php {
+  width: 80%;
+}
+
+.skills__java {
+  width: 65%;
+}
+
+.skills__laravel {
+  width: 85%;
+}
+
+.skills__flask {
+  width: 75%;
 }
 
 .skills__close .skills__list {
@@ -651,6 +677,79 @@ img {
   color: var(--first-color);
 }
 
+/*==================== PORT TAB ====================*/
+.portofolio__tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2);
+}
+
+.portofolio__button {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.portofolio__button:hover {
+  color: var(--first-color);
+}
+
+.portofolio__icon {
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+
+.portofolio__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
+.portofolio__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.portofolio__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.portofolio__calendar {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  /* margin-bottom: var(--mb-1) */
+}
+
+.portofolio__rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.portofolio__line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--first-color);
+  transform: translate(6px, -7px);
+}
+
+.portofolio__content[port-data-content] {
+  display: none;
+}
+
+.portofolio__active[port-data-content] {
+  display: block;
+}
+
+.portofolio__button.portofolio__active {
+  color: var(--first-color);
+}
+
 /*==================== SERVICES ====================*/
 .services__container {
   gap: 1.5rem;
@@ -666,7 +765,20 @@ img {
   transition: 0.3s;
 }
 
+.portofolioservices__content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
 .services__content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.portofolioservices__content:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -680,6 +792,11 @@ img {
 .services__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
+
+.portofolioservices__title {
+  font-size: var(--h4-font-size);
   font-weight: var(--font-medium);
 }
 
@@ -744,8 +861,106 @@ img {
   margin-right: var(--mb-0-25);
 }
 
+/*==================== PORTOFOLIO MODAL ====================*/
+.portofolio__container {
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.portofolio__content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.portofolio__content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.portofolio__icon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+
+.portofolio__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
+
+.portofolio__button {
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+
+.portofolio__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+.portofolio__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.portofolio__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.portofolio__modal-portofolio {
+  row-gap: 1rem;
+}
+
+.portofolio__modal-service {
+  display: flex;
+}
+
+.portofolio__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.portofolio__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.portofolio__modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
+
 /* Active Modal */
 .active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.port-active-modal {
   opacity: 1;
   visibility: visible;
 }
@@ -941,7 +1156,7 @@ img {
 }
 
 .footer__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-25);
 }
 
@@ -971,7 +1186,7 @@ img {
 .footer__copy {
   font-size: var(--smaller-font-size);
   text-align: center;
-  color: var(--text-color-light);
+  color: #fff;
   margin-top: var(--mb-3);
 }
 
@@ -1235,6 +1450,10 @@ img {
       padding: 6rem 0 2rem 2.5rem;
     }
 
+    .portfolioservices__content {
+      padding: 0rem 0 1rem 0rem;
+    }
+
     .services__modal-content {
       width: 450px;
     }
@@ -1326,5 +1545,54 @@ img {
   }
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*==================== Waving hand  ====================*/
+.wave {
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
   }
 }
